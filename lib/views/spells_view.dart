@@ -3,10 +3,10 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:hive_flutter/hive_flutter.dart';
+import 'package:latres/views/login_page.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:latres/views/character_view.dart';
 import 'package:latres/views/favorite_spells_view.dart';
-import 'package:latres/main.dart';
 
 class SpellsView extends StatefulWidget {
   const SpellsView({super.key});
@@ -99,7 +99,7 @@ class _SpellsViewState extends State<SpellsView> {
     _showTopSnackBar('Success!', 'Logged out Successfully', Colors.green);
     Navigator.pushAndRemoveUntil(
       context,
-      MaterialPageRoute(builder: (context) => const LoginView()),
+      MaterialPageRoute(builder: (context) => const LoginPage()),
       (route) => false,
     );
   }

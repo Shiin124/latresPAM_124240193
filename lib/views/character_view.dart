@@ -2,10 +2,10 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import 'package:latres/views/login_page.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:latres/views/character_detail_view.dart';
 import 'package:latres/views/spells_view.dart';
-import 'package:latres/main.dart';
 
 class CharacterView extends StatefulWidget {
   const CharacterView({super.key});
@@ -67,7 +67,7 @@ class _CharacterViewState extends State<CharacterView> {
 
     Navigator.pushAndRemoveUntil(
       context,
-      MaterialPageRoute(builder: (context) => const LoginView()),
+      MaterialPageRoute(builder: (context) => const LoginPage()),
       (route) => false,
     );
   }
