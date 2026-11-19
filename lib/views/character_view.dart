@@ -99,7 +99,7 @@ class _CharacterViewState extends State<CharacterView> {
                         width: 45,
                         height: 60,
                         fit: BoxFit.cover,
-                        errorBuilder: (_, __, ___) =>
+                        errorBuilder: (_, _, _) =>
                             const Icon(Icons.person, size: 45),
                       ),
                     ),
